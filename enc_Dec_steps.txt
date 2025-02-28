@@ -1,0 +1,51 @@
+ A)  wget https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.rpm
+ 
+ sudo rpm -ivh jdk-21_linux-x64_bin.rpm
+   20  java --version
+ 
+ 
+ 
+ B) Maven
+ 
+ wget https://dlcdn.apache.org/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.tar.gz
+   22  ls
+   23  tar -xvzf apache-maven-3.9.9-bin.tar.gz -C /opt/
+   24  sudo tar -xvzf apache-maven-3.9.9-bin.tar.gz -C /opt/
+   25  ls
+   26  sudo nano /etc/profile.d/maven.sh
+   27  sudo vi /etc/profile.d/maven.sh
+   28  source /etc/profile.d/maven.sh
+
+
+export M2_HOME=/opt/apache-maven-3.9.9
+export PATH=$M2_HOME/bin:$PATH
+
+
+mvn -version
+
+
+
+C)mvn dependency:go-offline
+
+ 
+ scp -i ssh_enc_prv.pem -r ~/.m2 roshank@34.56.255.202:/home/roshank/
+ 
+ 
+ 
+ Create a Maven Spring Boot Application:
+
+On your isolated server, navigate to the directory where you want your Spring Boot project.
+Create the pom.xml as shown earlier or transfer the pom.xml you prepared on the internet-connected machine.
+
+
+Build the Spring Boot Application:
+
+On your isolated server (with the local .m2 directory now available), build your Spring Boot project:
+
+bash
+Copy
+mvn clean install
+This should now use the local Maven repository and not attempt to reach out to the internet.
+
+
+java -jar target/my-springboot-app.jar
