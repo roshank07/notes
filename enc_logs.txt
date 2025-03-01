@@ -1,0 +1,153 @@
+[roshank@instance-20250228-190035 EncDec-service]$ vi pom.xml
+[roshank@instance-20250228-190035 EncDec-service]$
+[roshank@instance-20250228-190035 EncDec-service]$ mvn clean package -DskipTests --offline
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------< com.ktkbank.dcoe:EncDec-service >-------------------
+[INFO] Building EncDec-service 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The POM for net.bytebuddy:byte-buddy-agent:jar:1.15.11 is missing, no dependency information available
+[INFO]
+[INFO] --- clean:3.4.1:clean (default-clean) @ EncDec-service ---
+[INFO]
+[INFO] --- resources:3.3.1:resources (default-resources) @ EncDec-service ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO]
+[INFO] --- compiler:3.13.0:compile (default-compile) @ EncDec-service ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 1 source file with javac [debug parameters release 21] to target/classes
+[INFO]
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ EncDec-service ---
+[INFO] skip non existing resourceDirectory /home/roshank/EncDec-service/src/test/resources
+[INFO]
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ EncDec-service ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 21] to target/test-classes
+[INFO]
+[INFO] --- surefire:3.5.2:test (default-test) @ EncDec-service ---
+[INFO] Tests are skipped.
+[INFO]
+[INFO] --- jar:3.4.2:jar (default-jar) @ EncDec-service ---
+[INFO] Building jar: /home/roshank/EncDec-service/target/EncDec-service-0.0.1-SNAPSHOT.jar
+[INFO]
+[INFO] --- spring-boot:3.4.3:repackage (repackage) @ EncDec-service ---
+[INFO] Replacing main artifact /home/roshank/EncDec-service/target/EncDec-service-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /home/roshank/EncDec-service/target/EncDec-service-0.0.1-SNAPSHOT.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.214 s
+[INFO] Finished at: 2025-03-01T03:11:07Z
+[INFO] ------------------------------------------------------------------------
+[roshank@instance-20250228-190035 EncDec-service]$ vi pom.xml
+[roshank@instance-20250228-190035 EncDec-service]$ ll
+total 36
+-rw-r--r--. 1 roshank roshank   285 Feb 28 20:19 Dockerfile
+-rwxr-xr-x. 1 roshank roshank  1462 Feb 28 19:35 HELP.md
+-rwxr-xr-x. 1 roshank roshank 10665 Feb 28 19:35 mvnw
+-rwxr-xr-x. 1 roshank roshank  6912 Feb 28 19:35 mvnw.cmd
+-rwxr-xr-x. 1 roshank roshank  2254 Mar  1 03:10 pom.xml
+drwxrwxrwx. 4 roshank roshank    30 Feb 28 19:35 src
+drwxr-xr-x. 8 roshank roshank  4096 Mar  1 03:11 target
+[roshank@instance-20250228-190035 EncDec-service]$ rm Dockerfile
+[roshank@instance-20250228-190035 EncDec-service]$ vi Dockerfile
+[roshank@instance-20250228-190035 EncDec-service]$ mvn clean package -DskipTests
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------< com.ktkbank.dcoe:EncDec-service >-------------------
+[INFO] Building EncDec-service 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-agent/1.15.11/byte-buddy-agent-1.15.11.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-agent/1.15.11/byte-buddy-agent-1.15.11.pom (12 kB at 23 kB/s)
+[INFO]
+[INFO] --- clean:3.4.1:clean (default-clean) @ EncDec-service ---
+[INFO] Deleting /home/roshank/EncDec-service/target
+[INFO]
+[INFO] --- resources:3.3.1:resources (default-resources) @ EncDec-service ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO]
+[INFO] --- compiler:3.13.0:compile (default-compile) @ EncDec-service ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 1 source file with javac [debug parameters release 21] to target/classes
+[INFO]
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ EncDec-service ---
+[INFO] skip non existing resourceDirectory /home/roshank/EncDec-service/src/test/resources
+[INFO]
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ EncDec-service ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 21] to target/test-classes
+[INFO]
+[INFO] --- surefire:3.5.2:test (default-test) @ EncDec-service ---
+[INFO] Tests are skipped.
+[INFO]
+[INFO] --- jar:3.4.2:jar (default-jar) @ EncDec-service ---
+[INFO] Building jar: /home/roshank/EncDec-service/target/EncDec-service-0.0.1-SNAPSHOT.jar
+[INFO]
+[INFO] --- spring-boot:3.4.3:repackage (repackage) @ EncDec-service ---
+[INFO] Replacing main artifact /home/roshank/EncDec-service/target/EncDec-service-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /home/roshank/EncDec-service/target/EncDec-service-0.0.1-SNAPSHOT.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.082 s
+[INFO] Finished at: 2025-03-01T03:14:28Z
+[INFO] ------------------------------------------------------------------------
+[roshank@instance-20250228-190035 EncDec-service]$ docker build -t encdec-service .
+ERROR: permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Head "http://%2Fvar%2Frun%2Fdocker.sock/_ping": dial unix /var/run/docker.sock: connect: permission denied
+[roshank@instance-20250228-190035 EncDec-service]$ sudo docker build -t encdec-service .
+[+] Building 10.9s (8/8) FINISHED                                                                                                                        docker:default
+ => [internal] load build definition from Dockerfile                                                                                                               0.0s
+ => => transferring dockerfile: 393B                                                                                                                               0.0s
+ => [internal] load metadata for docker.io/library/eclipse-temurin:21-jdk                                                                                          0.7s
+ => [internal] load .dockerignore                                                                                                                                  0.0s
+ => => transferring context: 2B                                                                                                                                    0.0s
+ => [1/3] FROM docker.io/library/eclipse-temurin:21-jdk@sha256:b37f7053b1b366c62bd8d332508852a1281b59656af5bd6cf27a008d91111214                                    6.8s
+ => => resolve docker.io/library/eclipse-temurin:21-jdk@sha256:b37f7053b1b366c62bd8d332508852a1281b59656af5bd6cf27a008d91111214                                    0.0s
+ => => sha256:a10b6847b9f1913a9d34980e0354787e49b068cdbdd78c70bab054c6cfbd1660 157.59MB / 157.59MB                                                                 2.3s
+ => => sha256:b37f7053b1b366c62bd8d332508852a1281b59656af5bd6cf27a008d91111214 7.50kB / 7.50kB                                                                     0.0s
+ => => sha256:37ad496308dfd5551280c12604aa385eb2db6eaeedea700fd7d8375d786311a1 1.94kB / 1.94kB                                                                     0.0s
+ => => sha256:67e97e045e0efa3af8608ccbd09d14401374afd1772923d21c3db2e4f166ac30 6.08kB / 6.08kB                                                                     0.0s
+ => => sha256:5a7813e071bfadf18aaa6ca8318be4824a9b6297b3240f2cc84c1db6f4113040 29.75MB / 29.75MB                                                                   0.5s
+ => => sha256:8dbbbc6af9dc7b3eec20b35797f66551a17f035a85f020fc99a0457dd268aae8 22.94MB / 22.94MB                                                                   0.5s
+ => => sha256:dcc1c5ea3c7d921e35f64dce04af1c8a2cd97954281eb6af66f6067f6c2c319b 158B / 158B                                                                         0.6s
+ => => sha256:91e6cc55403ad09f9aeca15ab95bf547ad0b78be2b665c486beef7161150987d 2.28kB / 2.28kB                                                                     0.6s
+ => => extracting sha256:5a7813e071bfadf18aaa6ca8318be4824a9b6297b3240f2cc84c1db6f4113040                                                                          1.7s
+ => => extracting sha256:8dbbbc6af9dc7b3eec20b35797f66551a17f035a85f020fc99a0457dd268aae8                                                                          1.2s
+ => => extracting sha256:a10b6847b9f1913a9d34980e0354787e49b068cdbdd78c70bab054c6cfbd1660                                                                          2.9s
+ => => extracting sha256:dcc1c5ea3c7d921e35f64dce04af1c8a2cd97954281eb6af66f6067f6c2c319b                                                                          0.0s
+ => => extracting sha256:91e6cc55403ad09f9aeca15ab95bf547ad0b78be2b665c486beef7161150987d                                                                          0.0s
+ => [internal] load build context                                                                                                                                  0.2s
+ => => transferring context: 20.72MB                                                                                                                               0.2s
+ => [2/3] WORKDIR /app                                                                                                                                             3.0s
+ => [3/3] COPY target/EncDec-service-0.0.1-SNAPSHOT.jar app.jar                                                                                                    0.1s
+ => exporting to image                                                                                                                                             0.2s
+ => => exporting layers                                                                                                                                            0.1s
+ => => writing image sha256:c53ff94555179517e72d3442f333535d3e62054a4b6c281c4b910a34f18761ec                                                                       0.0s
+ => => naming to docker.io/library/encdec-service                                                                                                                  0.0s
+[roshank@instance-20250228-190035 EncDec-service]$ docker run -d -p 8080:8080 --name encdec encdec-service
+docker: permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Head "http://%2Fvar%2Frun%2Fdocker.sock/_ping": dial unix /var/run/docker.sock: connect: permission denied
+
+Run 'docker run --help' for more information
+[roshank@instance-20250228-190035 EncDec-service]$ sudo docker run -d -p 8080:8080 --name encdec encdec-service
+28d5acb245b0528714481bcf52957ab2946b435e42658f88abef54f1da022ad6
+[roshank@instance-20250228-190035 EncDec-service]$ docker ps
+permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%2Fvar%2Frun%2Fdocker.sock/v1.48/containers/json": dial unix /var/run/docker.sock: connect: permission denied
+[roshank@instance-20250228-190035 EncDec-service]$ ^Ccker ps
+[roshank@instance-20250228-190035 EncDec-service]$ sudo su
+[root@instance-20250228-190035 EncDec-service]# docker ps
+CONTAINER ID   IMAGE            COMMAND               CREATED          STATUS          PORTS                                         NAMES
+28d5acb245b0   encdec-service   "java -jar app.jar"   17 seconds ago   Up 17 seconds   0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp   encdec
+[root@instance-20250228-190035 EncDec-service]# curl http://localhost:8080
+{"timestamp":"2025-03-01T03:15:38.456+00:00","status":404,"error":"Not Found","path":"/"}[root@instance-20250228-190035 EncDec-service]#
+[root@instance-20250228-190035 EncDec-service]#
+[root@instance-20250228-190035 EncDec-service]#
+
+
+
+mvn clean package -DskipTests --offline
+docker build -t encdec-service .
+docker run -d -p 8001:8001 --name encdec encdec-service
